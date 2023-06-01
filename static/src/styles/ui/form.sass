@@ -1,0 +1,85 @@
+@import "../modules/basic"
+.recall-container
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+
+  .form-img
+    border-radius: 0 25px 25px 0
+    overflow: hidden
+
+  form
+    display: flex
+    flex-direction: column
+    gap: 20px
+    padding: 40px
+    background: $grey
+    border-radius: 25px 0 0 25px
+
+    .title
+      line-height: 1.2
+      font-size: 36px
+      font-weight: 700
+
+    .description
+      font-size: 16px
+      line-height: 1
+      font-weight: 400
+      opacity: .6
+
+    .inputs
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: 20px
+
+      input
+        width: 100%
+        outline: none
+        border: none
+        background: transparent
+        border-bottom: 1px solid $black_06
+
+      input:nth-of-type(3)
+        grid-column: span 2
+
+    .btn-section
+      display: flex
+      flex-direction: column
+      gap: 10px
+
+      span, a
+        font-size: 14px
+        line-height: 1
+
+      span
+        opacity: .4
+
+.modal-body
+  display: flex
+  flex-direction: column
+  gap: 20px
+  .inputs
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 20px
+
+    input
+      width: 100%
+      outline: none
+      border: none
+      background: transparent
+      border-bottom: 1px solid $black_06
+
+    input:nth-of-type(3)
+      grid-column: span 2
+
+  .btn-section
+    display: flex
+    flex-direction: column
+    gap: 10px
+
+    span, a
+      font-size: 14px
+      line-height: 1
+
+    span
+      opacity: .4
