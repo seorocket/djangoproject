@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'TTFirs';
+  src: url('/src/fonts/TTFirs-Medium.eot');
+  src: local('☞TT Firs Medium'), local('TTFirs-Medium'),
+  url('/src/fonts/TTFirs-Medium.eot?#iefix') format('embedded-opentype'),
+  url('/src/fonts/TTFirs-Medium.woff2') format('woff2'),
+  url('/src/fonts/TTFirs-Medium.woff') format('woff'),
+  url('/src/fonts/TTFirs-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style:normal;
+
+}
+
+@font-face {
+  font-family: 'TTFirs';
+  src: url('/src/fonts/TTFirs-Bold.eot');
+  src: local('☞TT Firs Bold'), local('TTFirs-Bold'),
+  url('/src/fonts/TTFirs-Bold.eot?#iefix') format('embedded-opentype'),
+  url('/src/fonts/TTFirs-Bold.woff2') format('woff2'),
+  url('/src/fonts/TTFirs-Bold.woff') format('woff'),
+  url('/src/fonts/TTFirs-Bold.ttf') format('truetype');
+  font-weight:bold;
+  font-style:normal;
+
+}

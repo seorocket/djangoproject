@@ -1,0 +1,31 @@
+{% load static %}
+<section id="recall" class="hidden-scroll">
+    <div class="recall-section">
+        <div class="container recall-container">
+            <form class="order-form">
+                <div class="title">
+                    Оставьте заявку на обратный звонок
+                </div>
+                <div class="description">Откройте новую главу своей жизни, наполненную грацией и ритмом, оставьте
+                    заявку прямо сейчас и начните увлекательное путешествие в мир гимнастики и танцев вместе с нами!
+                </div>
+                <div class="inputs">
+                    <label>
+                        <input type="text" data-ajaxType="name" class="required" placeholder="Ваше имя *">
+                    </label>
+                    <label>
+                        <input type="text" data-ajaxType="phone" class="phone-input required" placeholder="Номер телефона *">
+                    </label>
+                    <label>
+                        <input type="text" data-ajaxType="comment" placeholder="Комментарий к заявке">
+                    </label>
+                </div>
+                <div class="btn-section">
+                    <div class="btn send-btn" data-type="callback">Отправить</div>
+                    <span>Нажимая кнопку отправить вы соглашаете с <a href="/privacy/">политикой обработки персональных данных</a></span>
+                </div>
+            </form>
+            <div class="form-img"><img src="{% static 'src/images/other/Rectangle%206.jpg' %}" alt=""></div>
+        </div>
+    </div>
+</section>
