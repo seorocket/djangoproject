@@ -1,0 +1,130 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block content %}
+    <section>
+        <div class="landing-section">
+            <div class="container landing-container">
+                <div class="landing-block">
+                    <div class="title">Школа художественной гимнастики</div>
+                    <div class="description">Откройте двери в мир грации, элегантности и силы нашей школы гимнастики и
+                        танцев, где каждый шаг превращается в путешествие к самовыражению и искусству движения.
+                    </div>
+                    <a href="#recall" class="btn">Хочу записаться</a>
+                </div>
+                <div class="landing-img">
+                    <img src="{% static 'src/images/other/Rectangle%202.jpg' %}" alt="">
+                </div>
+                <div class="adventurer">
+                    <div class="item-a">
+                        <p>3</p>
+                        <span>Опытных <br>преподавателя</span>
+                    </div>
+                    <div class="item-a">
+                        <p>>100</p>
+                        <span>Выпускников <br>школы</span>
+                    </div>
+                    <div class="item-a">
+                        <p>>70</p>
+                        <span>Посещенных <br>мероприятий</span>
+                    </div>
+                    <div class="item-a">
+                        <p>20</p>
+                        <span>Золотых <br>презёров</span>
+                    </div>
+                    <div class="item-a">
+                        <p>2</p>
+                        <span>Оборудованных <br>корпуса</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hidden-scroll">
+        <div class="students-section">
+            <div class="container students-container">
+                <div class="title">Наши ученики</div>
+                <div class="content">
+                    <div class="swiper students-swiper">
+                        <div class="swiper-wrapper">
+                            {% for photo in gallery %}
+                                <div class="item-s swiper-slide"><img
+                                        src="{{ photo.photo.url }}" alt=""></div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hidden-scroll">
+        <div class="why-section">
+            <div class="container why-container">
+                <div class="title">Почему выбирают нашу школу?</div>
+                <div class="content">
+                    <div class="item-c">
+                        <div class="title">01</div>
+                        <div class="content">Индивидуальный подход к каждому ученику</div>
+                    </div>
+                    <div class="item-c">
+                        <div class="title">02</div>
+                        <div class="content">Справедливые цены на обучение</div>
+                    </div>
+                    <div class="item-c">
+                        <div class="title">А также</div>
+                        <div class="content">Возможность открыть новый возможности своего ребенка</div>
+                    </div>
+                    <div class="item-c">
+                        <div class="title">03</div>
+                        <div class="content">Сертификат о прохождении школы</div>
+                    </div>
+                    <div class="item-c">
+                        <div class="title">04</div>
+                        <div class="content">Коммуникативные методы наставничества:
+                            дискуссии, игры
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hidden-scroll">
+        <div class="news-section">
+            <div class="container news-container">
+                <div class="title">Новости</div>
+                <div class="content">
+                    {% for news in news %}
+                        <div class="item-n">
+                            <div class="title">{{ news.name }}</div>
+                            <div class="date">{{ news.dt_create | date:"d.m.Y" }}</div>
+                            <div class="text">{{ news.content|safe }}</div>
+                            <a href="{% url 'core:news-item' news.alias %}" class="more">Подробнее</a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hidden-scroll">
+        <div class="reviews-section">
+            <div class="container reviews-container">
+                <div class="title-w-btn">
+                    <div class="title">Отзывы</div>
+                    <div class="btn reviews-btn">Оставить отзыв</div>
+                </div>
+                <div class="content">
+                    <div class="swiper reviews-swiper">
+                        <div class="swiper-wrapper">
+                            {% for review in reviews %}
+                                <div class="item-r swiper-slide">
+                                    <div class="title">{{ review.name }}</div>
+                                    <div class="text">{{ review.text | safe }}</div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'components/recall-form.html' %}
+{% endblock %}

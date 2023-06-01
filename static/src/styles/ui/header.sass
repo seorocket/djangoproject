@@ -1,0 +1,39 @@
+@import "../modules/basic"
+.offcanvas-body
+  display: flex
+  flex-direction: column
+  gap: 20px
+  nav
+    ul
+      display: flex
+      flex-direction: column
+      gap: 20px
+
+header
+  padding: 50px 0
+  .burger
+    display: none
+  .header-container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    .logo
+      img
+        object-fit: contain
+
+    nav
+      flex: 1
+
+      ul
+        display: flex
+        justify-content: center
+        gap: 20px
+
+        li
+          padding: 5px 20px
+          background-color: $lightGrey
+          border-radius: 25px
+
+    .header-phone
+      font-size: 16px

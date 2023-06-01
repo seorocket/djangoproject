@@ -1,0 +1,79 @@
+@media screen and (max-width: 1400px)
+  main section .landing-section .landing-container
+    grid-template-columns: repeat(2, 1fr) !important
+
+@media screen and (max-width: 1200px)
+  main section .landing-section .landing-container
+    grid-template-columns: 1fr !important
+
+    .landing-img
+      display: none
+
+    .adventurer
+      grid-column: auto !important
+      display: grid !important
+      grid-template-columns: repeat(3, 1fr)
+      gap: 20px
+
+@media screen and (max-width: 990px)
+  main .contacts-block .content
+    padding: 40px 0
+  main .contacts-block
+    grid-template-columns: 1fr !important
+  .recall-container form
+    border-radius: 25px !important
+  .recall-container
+    grid-template-columns: 1fr !important
+
+  header .header-container .burger
+    display: block
+  header .header-container nav,
+  header .header-container .header-phone,
+  .recall-container .form-img
+    display: none
+
+@media screen and (max-width: 768px)
+  .recall-container form .title
+    font-size: 24px !important
+  main .about-section .about-container
+    grid-template-columns: 1fr !important
+    gap: 20px !important
+  section .container .title-w-btn
+    flex-direction: column !important
+    gap: 20px
+  .recall-container form .inputs,
+  .modal-body .inputs
+    grid-template-columns: 1fr !important
+  section
+    margin-bottom: 80px !important
+  main section .news-section .news-container > .content
+    grid-template-columns: 1fr !important
+  section .container > .title
+    font-size: 48px !important
+  main section .why-section .why-container > .content .item-c:nth-of-type(3)
+    grid-row: auto !important
+  main section .why-section .why-container > .content
+    grid-template-columns: 1fr !important
+
+  main section .landing-section .landing-container .landing-block
+    padding: 20px !important
+
+  main section .landing-section .landing-container .adventurer .item-a
+    justify-content: center
+  main section .landing-section .landing-container .adventurer
+    padding: 20px !important
+    grid-template-columns: 1fr
+  main section .landing-section .landing-container .landing-block .title
+    font-size: 42px !important
+  footer .footer-container .top-footer nav ul
+    display: grid !important
+    grid-template-columns: repeat(2, 1fr)
+
+@media screen and (max-width: 425px)
+  main .contacts-block .content a, main .contacts-block .content p
+    font-size: 18px !important
+  main section .landing-section .landing-container .landing-block .title
+    font-size: 36px !important
+  footer .footer-container .top-footer nav ul
+    grid-template-columns: 1fr !important
+

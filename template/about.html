@@ -1,0 +1,28 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block content %}
+    <section>
+        <div class="landing-page-section">
+            <div class="container landing-page-section">
+                <div class="title">О нас</div>
+                <img src="{% static 'src/images/other/Rectangle%208.jpg' %}" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="hidden-scroll">
+        <div class="about-section">
+            <div class="container about-container">
+                <div class="content">
+                    <div class="title">Что такое школа Грация-н?</div>
+                    <p>Наша школа гимнастики и танцев предлагает уникальную комбинацию профессионального обучения,
+                        творческой атмосферы и вдохновляющих тренировок, чтобы каждый ученик мог раскрыть свой потенциал
+                        и достичь новых высот в искусстве движения.</p>
+                    <p>Мы создаем команду единомышленников, где каждый студент ощущает поддержку, рост и радость от
+                        общего творчества.</p>
+                </div>
+                <div class="img-about"><img src="{% static 'src/images/other/Ellipse%201.jpg' %}" alt=""></div>
+            </div>
+        </div>
+    </section>
+    {% include 'components/recall-form.html' %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block content %}
+    <section>
+        <div class="landing-page-section">
+            <div class="container landing-page-section news">
+                <div class="title">{{ data.name }}</div>
+                <img src="{{ data.photo.url }}" alt="">
+                <article>
+                    {{ data.content|safe }}
+                </article>
+            </div>
+        </div>
+    </section>
+    {% include 'components/recall-form.html' %}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block content %}
+    <section>
+        <div class="news-section">
+            <div class="container news-container">
+                <div class="title">Новости</div>
+                <div class="content">
+                    {% for news in news %}
+                        <div class="item-n">
+                            <div class="title">{{ news.name }}</div>
+                            <div class="date">{{ news.dt_create | date:"d.m.Y" }}</div>
+                            <div class="text">{{ news.content|safe }}</div>
+                            <a href="{% url 'core:news-item' news.alias %}" class="more">Подробнее</a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'components/recall-form.html' %}
+{% endblock %}
