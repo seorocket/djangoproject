@@ -1,7 +1,10 @@
 # Django + restapi
 
 ## Установка проекта
-
+### Создать виртуальное окружение
+```
+virtualenv -p python3 .venv
+```
 ### Создать базу postgresql
 ```
 Название базы: djangoproject
