@@ -4,16 +4,19 @@
 ### Создать виртуальное окружение
 ```
 virtualenv -p python3 .venv
+
+активация виртального окружения:
+source .venv/bin/activate
+
+```
+### Устанавливаем зависимости
+```
+pip install -r requirements.txt
 ```
 ### Создать базу postgresql
 ```
 Название базы: djangoproject
 Далее применяем миграции: python manage.py migrate
-```
-
-### Устанавливаем зависимости
-```
-pip install -r requirements.txt
 ```
 
 ### Запуск проекта
